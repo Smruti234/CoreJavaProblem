@@ -1,29 +1,22 @@
 package CoreJavaProblem;
 import java.util.Scanner;
-public class FlipCoin {
-			public static void main(String[] args) {
-				int headsCount = 0;
-				int tailsCount = 0;
-				int counter=1;
-				Scanner scanner = new Scanner(System.in);
-				System.out.println("Enter Number of Times you want to Flip coin :");
-				int noOfFlips = scanner.nextInt();
-				scanner.close();
-				while(counter <= noOfFlips)
-				{
-					counter++;	
-					double random = Math.random();
-					if(random < 0.5)
-						tailsCount++;
-					else
-						headsCount++;
-				}
-				System.out.println("Number of Times Heads comes :" + headsCount);
-				System.out.println("Number of Times Tails comes :" + tailsCount);
-				double tailsPercentage = (double)tailsCount / noOfFlips * 100;
-				double headsPercentage = (double)headsCount / noOfFlips * 100;
-				System.out.println("Heads Percentage is :" + headsPercentage);
-				System.out.println("Tails Percentage is :" + tailsPercentage);
-			}
-		}
+
+public class HarmonicNumber {
+			 public static void main(String... a)
+		     {
+		         System.out.print("Enter any number : ");
+		         Scanner s = new Scanner(System.in);
+		         int num = s.nextInt();
+		         System.out.print("The Harmonic Series is : ");
+		         double result = 0.0;
+		         while(num > 0)
+		           {
+		                result = result + (double) 1 / num;
+		                num--;
+		                System.out.print(result +"  ");
+		           }
+		         System.out.println("");
+		         System.out.println("Output of Harmonic Series is "+result);
+		     }
+		 }
 
